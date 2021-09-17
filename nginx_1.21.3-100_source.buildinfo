@@ -1,16 +1,16 @@
 Format: 1.0
 Source: nginx
 Architecture: source
-Version: 1.21.3-1
+Version: 1.21.3-100
 Checksums-Md5:
- 5cd1c6e5f090711b2727e62e692cb21b 3626 nginx_1.21.3-1.dsc
+ 92a04513c50414187dcd37c3a0bd6757 3634 nginx_1.21.3-100.dsc
 Checksums-Sha1:
- 685545b9d6719a8fe6659d3cdb5bcbe65e0b2d9b 3626 nginx_1.21.3-1.dsc
+ 6b9e94ab0af288cc8dbec0d6823bcdf4f345d347 3634 nginx_1.21.3-100.dsc
 Checksums-Sha256:
- 02da43be6f5e6c9bc1b9c93b55838f55d8607da29ca11fc7a61e2ff2fefd3f26 3626 nginx_1.21.3-1.dsc
+ ce7bd941b815603c863741b6844562e166123cfb3f2810cb7e3345f2bbf8d5c6 3634 nginx_1.21.3-100.dsc
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Thu, 16 Sep 2021 12:55:48 +0000
+Build-Date: Fri, 17 Sep 2021 07:25:38 +0000
 Installed-Build-Depends:
  autoconf (= 2.69-14),
  automake (= 1:1.16.3-2),
@@ -161,4 +161,4 @@ Installed-Build-Depends:
  zlib1g (= 1:1.2.11.dfsg-2)
 Environment:
  DEB_BUILD_OPTIONS="parallel=2"
- SOURCE_DATE_EPOCH="1631790000"
+ SOURCE_DATE_EPOCH="1631862332"

@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Fri, 17 Sep 2021 07:05:32 +0000
+Source: nginx
+Architecture: source
+Version: 1.21.3-100
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Changed-By: Package Store <kitsune.solar@gmail.com>
+Changes:
+ nginx (1.21.3-100) unstable; urgency=medium
+ .
+   * COMMIT: 28cea613e4d327458cc715425cfa9ee399c68b11.
+   * UPD: Move to DEB Store.
+Checksums-Sha1:
+ 6b9e94ab0af288cc8dbec0d6823bcdf4f345d347 3634 nginx_1.21.3-100.dsc
+ 682f592180cdd91ae866a8b40c3d8762659248d7 1066609 nginx_1.21.3.orig.tar.gz
+ d81e24355ec6b6d219e44f5ea20aaa357fed4cf5 1038572 nginx_1.21.3-100.debian.tar.xz
+ 8c6cd0167162f2f568cb4135c43b78ab72767b63 4395 nginx_1.21.3-100_source.buildinfo
+Checksums-Sha256:
+ ce7bd941b815603c863741b6844562e166123cfb3f2810cb7e3345f2bbf8d5c6 3634 nginx_1.21.3-100.dsc
+ 14774aae0d151da350417efc4afda5cce5035056e71894836797e1f6e2d1175a 1066609 nginx_1.21.3.orig.tar.gz
+ ad1f6e15d13f2cdfef137030169841a1b0113e7b75872ee37203beaa673dd545 1038572 nginx_1.21.3-100.debian.tar.xz
+ ae26ca03eb568b8e9f77f416638f4d4046e28fe6a46d3c4cdb5c9580ae60c9ea 4395 nginx_1.21.3-100_source.buildinfo
+Files:
+ 92a04513c50414187dcd37c3a0bd6757 3634 httpd optional nginx_1.21.3-100.dsc
+ 21cf8dbb90efc89012fe8b49e3e025d3 1066609 httpd optional nginx_1.21.3.orig.tar.gz
+ 3a72c3c232ce063001e41eae769c7227 1038572 httpd optional nginx_1.21.3-100.debian.tar.xz
+ 2a357187fe533575970cbb4ee6daf6e9 4395 httpd optional nginx_1.21.3-100_source.buildinfo

@@ -1,6 +1,6 @@
  dpkg-buildpackage -us -uc -ui -i -d -S
 dpkg-buildpackage: info: source package nginx
-dpkg-buildpackage: info: source version 1.21.3-1
+dpkg-buildpackage: info: source version 1.21.3-100
 dpkg-buildpackage: info: source distribution unstable
 dpkg-buildpackage: info: source changed by Package Store <kitsune.solar@gmail.com>
  dpkg-source -i --before-build .
@@ -490,16 +490,16 @@ dpkg-source: warning: ignoring deletion of file auto/cc/gcc, use --include-remov
 dpkg-source: warning: ignoring deletion of file auto/cc/conf, use --include-removal to override
 dpkg-source: warning: ignoring deletion of file auto/cc/icc, use --include-removal to override
 dpkg-source: warning: ignoring deletion of file auto/cc/msvc, use --include-removal to override
-dpkg-source: info: building nginx in nginx_1.21.3-1.debian.tar.xz
-dpkg-source: info: building nginx in nginx_1.21.3-1.dsc
+dpkg-source: info: building nginx in nginx_1.21.3-100.debian.tar.xz
+dpkg-source: info: building nginx in nginx_1.21.3-100.dsc
  dpkg-genbuildinfo --build=source
- dpkg-genchanges --build=source >../nginx_1.21.3-1_source.changes
+ dpkg-genchanges --build=source >../nginx_1.21.3-100_source.changes
 dpkg-genchanges: info: including full source code in upload
  dpkg-source -i --after-build .
 dpkg-buildpackage: info: full upload (original source is included)
-Now running lintian nginx_1.21.3-1_source.changes ...
+Now running lintian nginx_1.21.3-100_source.changes ...
 warning: running with root privileges is not recommended!
 W: nginx source: no-nmu-in-changelog
 W: nginx source: orig-tarball-missing-upstream-signature nginx_1.21.3.orig.tar.gz
-W: nginx source: source-nmu-has-incorrect-version-number 1.21.3-1
+W: nginx source: source-nmu-has-incorrect-version-number 1.21.3-100
 Finished running lintian.
