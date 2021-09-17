@@ -3,14 +3,14 @@ Source: nginx
 Architecture: source
 Version: 1.21.3-100
 Checksums-Md5:
- 92a04513c50414187dcd37c3a0bd6757 3634 nginx_1.21.3-100.dsc
+ 2fccad55ed3b5a4e463e535d22a60e24 3807 nginx_1.21.3-100.dsc
 Checksums-Sha1:
- 6b9e94ab0af288cc8dbec0d6823bcdf4f345d347 3634 nginx_1.21.3-100.dsc
+ a53d4e5b088c817bcc744fbfcb3945916719a2ee 3807 nginx_1.21.3-100.dsc
 Checksums-Sha256:
- ce7bd941b815603c863741b6844562e166123cfb3f2810cb7e3345f2bbf8d5c6 3634 nginx_1.21.3-100.dsc
+ a09a67597f1559cc8a97864824ed732993238dd15a85e595c3591f1288a96531 3807 nginx_1.21.3-100.dsc
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Fri, 17 Sep 2021 07:25:38 +0000
+Build-Date: Fri, 17 Sep 2021 07:58:00 +0000
 Installed-Build-Depends:
  autoconf (= 2.69-14),
  automake (= 1:1.16.3-2),

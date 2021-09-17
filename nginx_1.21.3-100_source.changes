@@ -10,20 +10,16 @@ Changed-By: Package Store <kitsune.solar@gmail.com>
 Changes:
  nginx (1.21.3-100) unstable; urgency=medium
  .
-   * COMMIT: 28cea613e4d327458cc715425cfa9ee399c68b11.
    * UPD: Move to DEB Store.
 Checksums-Sha1:
- 6b9e94ab0af288cc8dbec0d6823bcdf4f345d347 3634 nginx_1.21.3-100.dsc
- 682f592180cdd91ae866a8b40c3d8762659248d7 1066609 nginx_1.21.3.orig.tar.gz
- d81e24355ec6b6d219e44f5ea20aaa357fed4cf5 1038572 nginx_1.21.3-100.debian.tar.xz
- 8c6cd0167162f2f568cb4135c43b78ab72767b63 4395 nginx_1.21.3-100_source.buildinfo
+ a53d4e5b088c817bcc744fbfcb3945916719a2ee 3807 nginx_1.21.3-100.dsc
+ 7bbb6ba22fcfc1c93331815548ee60230b5b9c8c 1068816 nginx_1.21.3-100.debian.tar.xz
+ 681a85aad42d38de94d0119796c0bea5ede4d253 4395 nginx_1.21.3-100_source.buildinfo
 Checksums-Sha256:
- ce7bd941b815603c863741b6844562e166123cfb3f2810cb7e3345f2bbf8d5c6 3634 nginx_1.21.3-100.dsc
- 14774aae0d151da350417efc4afda5cce5035056e71894836797e1f6e2d1175a 1066609 nginx_1.21.3.orig.tar.gz
- ad1f6e15d13f2cdfef137030169841a1b0113e7b75872ee37203beaa673dd545 1038572 nginx_1.21.3-100.debian.tar.xz
- ae26ca03eb568b8e9f77f416638f4d4046e28fe6a46d3c4cdb5c9580ae60c9ea 4395 nginx_1.21.3-100_source.buildinfo
+ a09a67597f1559cc8a97864824ed732993238dd15a85e595c3591f1288a96531 3807 nginx_1.21.3-100.dsc
+ 10f8392aab6101b64123b76c766d336421bf3ed336d25a39364d3501a8d3285f 1068816 nginx_1.21.3-100.debian.tar.xz
+ 9b1cabfb44ae5a251cd05ebaead4c3da83c343edcde2c218cc3bdf43f84a4728 4395 nginx_1.21.3-100_source.buildinfo
 Files:
- 92a04513c50414187dcd37c3a0bd6757 3634 httpd optional nginx_1.21.3-100.dsc
- 21cf8dbb90efc89012fe8b49e3e025d3 1066609 httpd optional nginx_1.21.3.orig.tar.gz
- 3a72c3c232ce063001e41eae769c7227 1038572 httpd optional nginx_1.21.3-100.debian.tar.xz
- 2a357187fe533575970cbb4ee6daf6e9 4395 httpd optional nginx_1.21.3-100_source.buildinfo
+ 2fccad55ed3b5a4e463e535d22a60e24 3807 httpd optional nginx_1.21.3-100.dsc
+ 6d5958a07bb2d99b20cb0da809856d67 1068816 httpd optional nginx_1.21.3-100.debian.tar.xz
+ 3eb1f4c28dddf26ca954e9d752931af9 4395 httpd optional nginx_1.21.3-100_source.buildinfo
