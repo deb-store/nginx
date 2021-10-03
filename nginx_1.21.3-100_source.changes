@@ -14,12 +14,12 @@ Changes:
 Checksums-Sha1:
  a53d4e5b088c817bcc744fbfcb3945916719a2ee 3807 nginx_1.21.3-100.dsc
  7bbb6ba22fcfc1c93331815548ee60230b5b9c8c 1068816 nginx_1.21.3-100.debian.tar.xz
- 06a93caf024d279e235fec965d2d807c72f52343 4395 nginx_1.21.3-100_source.buildinfo
+ 3f3650bba9a40e4051ba5cece5efc5225cce1070 4395 nginx_1.21.3-100_source.buildinfo
 Checksums-Sha256:
  a09a67597f1559cc8a97864824ed732993238dd15a85e595c3591f1288a96531 3807 nginx_1.21.3-100.dsc
  10f8392aab6101b64123b76c766d336421bf3ed336d25a39364d3501a8d3285f 1068816 nginx_1.21.3-100.debian.tar.xz
- b172d8fab0c5b8d6c4464f62d2c8ad9824e57e919dee1f2cbd843ec60793a720 4395 nginx_1.21.3-100_source.buildinfo
+ 4e2d3e0aac255753218bc229e8f469190ed52b8897acee7afd631fcbf0026d0d 4395 nginx_1.21.3-100_source.buildinfo
 Files:
  2fccad55ed3b5a4e463e535d22a60e24 3807 httpd optional nginx_1.21.3-100.dsc
  6d5958a07bb2d99b20cb0da809856d67 1068816 httpd optional nginx_1.21.3-100.debian.tar.xz
- 9a122dd623ca26e7d03d2843088f2b52 4395 httpd optional nginx_1.21.3-100_source.buildinfo
+ f933f1aef4749e0543d40b70e3d6e158 4395 httpd optional nginx_1.21.3-100_source.buildinfo
