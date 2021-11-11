@@ -2,7 +2,7 @@ Format: 3.0 (quilt)
 Source: nginx
 Binary: nginx, nginx-doc, nginx-common, nginx-core, nginx-full, nginx-light, nginx-extras, libnginx-mod-brotli, libnginx-mod-http-geoip, libnginx-mod-http-geoip2, libnginx-mod-http-image-filter, libnginx-mod-http-xslt-filter, libnginx-mod-mail, libnginx-mod-stream, libnginx-mod-stream-geoip, libnginx-mod-stream-geoip2, libnginx-mod-http-perl, libnginx-mod-http-auth-pam, libnginx-mod-http-lua, libnginx-mod-http-ndk, libnginx-mod-nchan, libnginx-mod-http-echo, libnginx-mod-http-upstream-fair, libnginx-mod-http-headers-more-filter, libnginx-mod-http-cache-purge, libnginx-mod-http-fancyindex, libnginx-mod-http-uploadprogress, libnginx-mod-http-subs-filter, libnginx-mod-http-dav-ext, libnginx-mod-rtmp, libnginx-mod-ssl-ct
 Architecture: any all
-Version: 1.21.3-100
+Version: 1.21.4-100
 Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
 Uploaders: Christos Trochalakis <ctrochalakis@debian.org>, Ondřej Nový <onovy@debian.org>,
 Homepage: https://nginx.net
@@ -45,11 +45,11 @@ Package-List:
  nginx-full deb httpd optional arch=all
  nginx-light deb httpd optional arch=any
 Checksums-Sha1:
- 682f592180cdd91ae866a8b40c3d8762659248d7 1066609 nginx_1.21.3.orig.tar.gz
- 7bbb6ba22fcfc1c93331815548ee60230b5b9c8c 1068816 nginx_1.21.3-100.debian.tar.xz
+ d920cbd2e9cdbaa7905182cf263d5ff545e143b8 684464 nginx_1.21.4.orig.tar.xz
+ 6699b869c1ebcf18a3241ef7d0cecb2695cf66fd 1068988 nginx_1.21.4-100.debian.tar.xz
 Checksums-Sha256:
- 14774aae0d151da350417efc4afda5cce5035056e71894836797e1f6e2d1175a 1066609 nginx_1.21.3.orig.tar.gz
- 10f8392aab6101b64123b76c766d336421bf3ed336d25a39364d3501a8d3285f 1068816 nginx_1.21.3-100.debian.tar.xz
+ 0d540684f647428eb6ab8e134dc27d859e19dd1b658639cd2303f8056eae7a55 684464 nginx_1.21.4.orig.tar.xz
+ 1fbbdd4a707b579fe78aeaa015c0c7d8b10058fe416dfaf4c46d3fd55b357baf 1068988 nginx_1.21.4-100.debian.tar.xz
 Files:
- 21cf8dbb90efc89012fe8b49e3e025d3 1066609 nginx_1.21.3.orig.tar.gz
- 6d5958a07bb2d99b20cb0da809856d67 1068816 nginx_1.21.3-100.debian.tar.xz
+ a7f7b7a05208f3a4de7be1a5202eff26 684464 nginx_1.21.4.orig.tar.xz
+ 9b9456cc9bbc7320a33c0d7abfb4f6bf 1068988 nginx_1.21.4-100.debian.tar.xz
