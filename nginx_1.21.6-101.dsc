@@ -2,7 +2,7 @@ Format: 3.0 (quilt)
 Source: nginx
 Binary: nginx, nginx-doc, nginx-common, nginx-core, nginx-full, nginx-light, nginx-extras, libnginx-mod-brotli, libnginx-mod-http-geoip, libnginx-mod-http-geoip2, libnginx-mod-http-image-filter, libnginx-mod-http-xslt-filter, libnginx-mod-mail, libnginx-mod-stream, libnginx-mod-stream-geoip, libnginx-mod-stream-geoip2, libnginx-mod-http-perl, libnginx-mod-http-auth-pam, libnginx-mod-http-lua, libnginx-mod-http-ndk, libnginx-mod-nchan, libnginx-mod-http-echo, libnginx-mod-http-upstream-fair, libnginx-mod-http-headers-more-filter, libnginx-mod-http-cache-purge, libnginx-mod-http-fancyindex, libnginx-mod-http-uploadprogress, libnginx-mod-http-subs-filter, libnginx-mod-http-dav-ext, libnginx-mod-rtmp, libnginx-mod-ssl-ct
 Architecture: any all
-Version: 1.21.6-100
+Version: 1.21.6-101
 Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
 Uploaders: Christos Trochalakis <ctrochalakis@debian.org>, Ondřej Nový <onovy@debian.org>,
 Homepage: https://nginx.net
@@ -46,10 +46,10 @@ Package-List:
  nginx-light deb httpd optional arch=any
 Checksums-Sha1:
  5f58cdc3ecc8739c255b8d21348bdc3950fcfecf 686920 nginx_1.21.6.orig.tar.xz
- 45544a00966b2a631811dec0db7a626f26c34298 1068816 nginx_1.21.6-100.debian.tar.xz
+ 32b912f8048ca55ede032ae7473d8152b248401c 1069068 nginx_1.21.6-101.debian.tar.xz
 Checksums-Sha256:
  796bd42cf56d2c5edd50bf571dd243aac7fae1fe499d63d9c42cd10ff9193ff7 686920 nginx_1.21.6.orig.tar.xz
- 039f895dc7c6701028005da879e10f0a639c2af9909dda2f03c8c0ac4078b034 1068816 nginx_1.21.6-100.debian.tar.xz
+ 5e92cc3e288f958e6fd8da74e68bde2b4c0e7d0ef1183aeefc581bbd2c2579ef 1069068 nginx_1.21.6-101.debian.tar.xz
 Files:
  0b1fb5fbe749ef649654b7976d3be75a 686920 nginx_1.21.6.orig.tar.xz
- c5be839749aac7775b173610b599f5b6 1068816 nginx_1.21.6-100.debian.tar.xz
+ 2d7d670ebaa0a0df17ef9193280f2452 1069068 nginx_1.21.6-101.debian.tar.xz
