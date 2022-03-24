@@ -1,0 +1,508 @@
+ dpkg-buildpackage -us -uc -ui -i -d -S
+dpkg-buildpackage: info: source package nginx
+dpkg-buildpackage: info: source version 1.21.6-100
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Package Store <mail@z17.dev>
+ dpkg-source -i --before-build .
+ debian/rules clean
+make: pkg-config: No such file or directory
+dh clean
+   debian/rules override_dh_clean
+make[1]: Entering directory '/root/git/repo_src/_build'
+make[1]: pkg-config: No such file or directory
+if [ -s /root/git/repo_src/_build/debian/modules/http-cache-purge/.pc/applied-patches ]; then \
+	cd /root/git/repo_src/_build/debian/modules/http-cache-purge && QUILT_PATCHES=/root/git/repo_src/_build/debian/modules/patches/http-cache-purge quilt pop -q -a; \
+	rm -rf /root/git/repo_src/_build/debian/modules/http-cache-purge/.pc; \
+fi
+if [ -s /root/git/repo_src/_build/debian/modules/http-lua/.pc/applied-patches ]; then \
+	cd /root/git/repo_src/_build/debian/modules/http-lua && QUILT_PATCHES=/root/git/repo_src/_build/debian/modules/patches/http-lua quilt pop -q -a; \
+	rm -rf /root/git/repo_src/_build/debian/modules/http-lua/.pc; \
+fi
+if [ -s /root/git/repo_src/_build/debian/modules/http-subs-filter/.pc/applied-patches ]; then \
+	cd /root/git/repo_src/_build/debian/modules/http-subs-filter && QUILT_PATCHES=/root/git/repo_src/_build/debian/modules/patches/http-subs-filter quilt pop -q -a; \
+	rm -rf /root/git/repo_src/_build/debian/modules/http-subs-filter/.pc; \
+fi
+if [ -s /root/git/repo_src/_build/debian/modules/http-upstream-fair/.pc/applied-patches ]; then \
+	cd /root/git/repo_src/_build/debian/modules/http-upstream-fair && QUILT_PATCHES=/root/git/repo_src/_build/debian/modules/patches/http-upstream-fair quilt pop -q -a; \
+	rm -rf /root/git/repo_src/_build/debian/modules/http-upstream-fair/.pc; \
+fi
+if [ -s /root/git/repo_src/_build/debian/modules/nchan/.pc/applied-patches ]; then \
+	cd /root/git/repo_src/_build/debian/modules/nchan && QUILT_PATCHES=/root/git/repo_src/_build/debian/modules/patches/nchan quilt pop -q -a; \
+	rm -rf /root/git/repo_src/_build/debian/modules/nchan/.pc; \
+fi
+rm -rf /root/git/repo_src/_build/debian/build-core
+rm -rf /root/git/repo_src/_build/debian/build-light
+rm -rf /root/git/repo_src/_build/debian/build-extras
+dh_clean
+	rm -f debian/debhelper-build-stamp
+	rm -rf debian/.debhelper/
+	rm -f -- debian/nginx.substvars debian/nginx-doc.substvars debian/nginx-common.substvars debian/nginx-core.substvars debian/nginx-full.substvars debian/nginx-light.substvars debian/nginx-extras.substvars debian/libnginx-mod-brotli.substvars debian/libnginx-mod-http-geoip.substvars debian/libnginx-mod-http-geoip2.substvars debian/libnginx-mod-http-image-filter.substvars debian/libnginx-mod-http-xslt-filter.substvars debian/libnginx-mod-mail.substvars debian/libnginx-mod-stream.substvars debian/libnginx-mod-stream-geoip.substvars debian/libnginx-mod-stream-geoip2.substvars debian/libnginx-mod-http-perl.substvars debian/libnginx-mod-http-auth-pam.substvars debian/libnginx-mod-http-lua.substvars debian/libnginx-mod-http-ndk.substvars debian/libnginx-mod-nchan.substvars debian/libnginx-mod-http-echo.substvars debian/libnginx-mod-http-upstream-fair.substvars debian/libnginx-mod-http-headers-more-filter.substvars debian/libnginx-mod-http-cache-purge.substvars debian/libnginx-mod-http-fancyindex.substvars debian/libnginx-mod-http-uploadprogress.substvars debian/libnginx-mod-http-subs-filter.substvars debian/libnginx-mod-http-dav-ext.substvars debian/libnginx-mod-rtmp.substvars debian/libnginx-mod-ssl-ct.substvars debian/files
+	rm -fr -- debian/nginx/ debian/tmp/ debian/nginx-doc/ debian/nginx-common/ debian/nginx-core/ debian/nginx-full/ debian/nginx-light/ debian/nginx-extras/ debian/libnginx-mod-brotli/ debian/libnginx-mod-http-geoip/ debian/libnginx-mod-http-geoip2/ debian/libnginx-mod-http-image-filter/ debian/libnginx-mod-http-xslt-filter/ debian/libnginx-mod-mail/ debian/libnginx-mod-stream/ debian/libnginx-mod-stream-geoip/ debian/libnginx-mod-stream-geoip2/ debian/libnginx-mod-http-perl/ debian/libnginx-mod-http-auth-pam/ debian/libnginx-mod-http-lua/ debian/libnginx-mod-http-ndk/ debian/libnginx-mod-nchan/ debian/libnginx-mod-http-echo/ debian/libnginx-mod-http-upstream-fair/ debian/libnginx-mod-http-headers-more-filter/ debian/libnginx-mod-http-cache-purge/ debian/libnginx-mod-http-fancyindex/ debian/libnginx-mod-http-uploadprogress/ debian/libnginx-mod-http-subs-filter/ debian/libnginx-mod-http-dav-ext/ debian/libnginx-mod-rtmp/ debian/libnginx-mod-ssl-ct/
+	find .  \( \( \
+		\( -path .\*/.git -o -path .\*/.svn -o -path .\*/.bzr -o -path .\*/.hg -o -path .\*/CVS -o -path .\*/.pc -o -path .\*/_darcs \) -prune -o -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+make[1]: Leaving directory '/root/git/repo_src/_build'
+ dpkg-source -i -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: warning: upstream signing key but no upstream tarball signature
+dpkg-source: info: building nginx using existing ./nginx_1.21.6.orig.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: warning: ignoring deletion of file LICENSE, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file README, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file configure, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file CHANGES, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file CHANGES.ru, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src
+dpkg-source: warning: ignoring deletion of directory src/event
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_pipe.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_accept.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_connect.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_openssl.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_timer.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_openssl_stapling.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_openssl.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_posted.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_udp.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_pipe.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_connect.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_timer.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/ngx_event_posted.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/event/modules
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_eventport_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_poll_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_win32_poll_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_win32_select_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_epoll_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_kqueue_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_devpoll_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/event/modules/ngx_select_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/core
+dpkg-source: warning: ignoring deletion of file src/core/ngx_palloc.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_array.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_md5.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_md5.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_crc.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_crc32.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_resolver.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_open_file_cache.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_cpuinfo.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_cycle.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_crypt.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_slab.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_parse_time.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_queue.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_open_file_cache.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_sha1.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_parse.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/nginx.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_rbtree.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_resolver.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_string.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_times.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_conf_file.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_queue.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_array.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_rwlock.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_cycle.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_config.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_hash.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_palloc.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_connection.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_radix_tree.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_thread_pool.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_file.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_core.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_hash.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_log.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_buf.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_regex.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_inet.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_crc32.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_proxy_protocol.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_syslog.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_crypt.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_syslog.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_regex.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_parse_time.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_string.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_output_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_spinlock.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_slab.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_parse.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_log.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_murmurhash.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_rwlock.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_times.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_connection.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_murmurhash.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_shmtx.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_list.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_shmtx.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_thread_pool.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_rbtree.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/nginx.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_inet.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_list.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_radix_tree.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_file.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_conf_file.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_sha1.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_proxy_protocol.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/core/ngx_buf.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/stream
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream_random_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_proxy_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_ssl_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream_hash_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_variables.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_write_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream_least_conn_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_ssl_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_variables.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_core_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream_round_robin.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_realip_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_access_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_map_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_geo_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_split_clients_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_log_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream_zone_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_limit_conn_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_ssl_preread_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_script.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_script.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_upstream_round_robin.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_return_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_set_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_geoip_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/stream/ngx_stream_handler.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/http
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_huff_encode.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_header_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_cache.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_upstream.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_postpone_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_upstream.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_special_response.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_upstream_round_robin.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_config.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_parse.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_write_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_upstream_round_robin.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_core_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_variables.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_copy_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_request_body.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_request.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_variables.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_script.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_script.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_file_cache.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_huff_decode.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_core_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/ngx_http_request.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/http/modules
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_upstream_zone_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_xslt_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_geoip_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_referer_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_auth_basic_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_range_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_grpc_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_static_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_userid_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_upstream_keepalive_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_gzip_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_rewrite_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_uwsgi_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_gunzip_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_limit_conn_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_addition_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_secure_link_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_flv_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_auth_request_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_map_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_try_files_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_upstream_least_conn_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_sub_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_realip_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_headers_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_autoindex_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_degradation_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_ssi_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_stub_status_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_charset_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_dav_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_chunked_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_mirror_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_split_clients_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_mp4_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_ssi_filter_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_geo_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_memcached_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_upstream_ip_hash_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_random_index_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_ssl_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_upstream_random_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_limit_req_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_gzip_static_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_image_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_access_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_scgi_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_not_modified_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_proxy_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_index_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_browser_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_fastcgi_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_log_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_ssl_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_slice_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_upstream_hash_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/ngx_http_empty_gif_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/http/modules/perl
+dpkg-source: warning: ignoring deletion of file src/http/modules/perl/Makefile.PL, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/perl/nginx.xs, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/perl/ngx_http_perl_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/perl/nginx.pm, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/perl/ngx_http_perl_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/modules/perl/typemap, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/http/v2
+dpkg-source: warning: ignoring deletion of file src/http/v2/ngx_http_v2_encode.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/v2/ngx_http_v2_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/v2/ngx_http_v2.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/v2/ngx_http_v2.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/v2/ngx_http_v2_table.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/v2/ngx_http_v2_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/http/v2/ngx_http_v2_filter_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/os
+dpkg-source: warning: ignoring deletion of directory src/os/unix
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_solaris_sendfilev_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_alloc.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_linux.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_time.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_thread_cond.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_thread.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_channel.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_recv.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_freebsd.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_time.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_udp_recv.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_channel.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_send.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_process.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_linux_sendfile_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_gcc_atomic_ppc.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_process_cycle.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_posix_config.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_writev_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_darwin_init.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_dlopen.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_thread_id.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_os.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_sunpro_sparc64.il, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_thread_mutex.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_udp_sendmsg_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_sunpro_atomic_sparc64.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_sunpro_x86.il, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_darwin.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_gcc_atomic_x86.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_darwin_config.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_files.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_atomic.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_posix_init.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_process.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_user.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_errno.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_errno.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_socket.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_setaffinity.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_alloc.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_darwin_sendfile_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_linux_init.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_solaris_init.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_solaris.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_dlopen.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_udp_send.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_file_aio_read.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_user.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_shmem.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_setaffinity.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_process_cycle.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_setproctitle.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_files.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_gcc_atomic_amd64.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_socket.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_freebsd_sendfile_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_shmem.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_linux_aio_read.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_solaris_config.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_setproctitle.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_daemon.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_freebsd_config.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_sunpro_amd64.il, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_linux_config.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_readv_chain.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_gcc_atomic_sparc64.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/os/unix/ngx_freebsd_init.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/misc
+dpkg-source: warning: ignoring deletion of file src/misc/ngx_google_perftools_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/misc/ngx_cpp_test_module.cpp, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory src/mail
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_ssl_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_imap_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_imap_handler.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_handler.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_realip_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_ssl_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_core_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_pop3_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_smtp_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_pop3_handler.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_imap_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_pop3_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_proxy_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_parse.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_smtp_handler.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_smtp_module.h, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file src/mail/ngx_mail_auth_http_module.c, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory html
+dpkg-source: warning: ignoring deletion of file html/index.html, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file html/50x.html, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory man
+dpkg-source: warning: ignoring deletion of file man/nginx.8, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto
+dpkg-source: warning: ignoring deletion of file auto/options, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/install, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/unix, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/stubs, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/headers, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/modules, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/have, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/have_headers, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/init, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/define, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/make, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/module, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/feature, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/nohave, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/threads, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/include, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/sources, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/summary, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/endianness, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/os
+dpkg-source: warning: ignoring deletion of file auto/os/win32, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/os/solaris, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/os/linux, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/os/freebsd, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/os/darwin, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/os/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/types
+dpkg-source: warning: ignoring deletion of file auto/types/value, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/types/typedef, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/types/sizeof, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/types/uintptr_t, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/cc
+dpkg-source: warning: ignoring deletion of file auto/cc/bcc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/icc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/acc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/clang, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/sunc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/name, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/owc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/ccc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/msvc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/gcc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/cc/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib
+dpkg-source: warning: ignoring deletion of file auto/lib/make, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/pcre
+dpkg-source: warning: ignoring deletion of file auto/lib/pcre/makefile.owc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/pcre/make, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/pcre/makefile.msvc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/pcre/makefile.bcc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/pcre/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/zlib
+dpkg-source: warning: ignoring deletion of file auto/lib/zlib/makefile.owc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/zlib/make, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/zlib/makefile.msvc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/zlib/makefile.bcc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/zlib/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/perl
+dpkg-source: warning: ignoring deletion of file auto/lib/perl/make, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/perl/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/libgd
+dpkg-source: warning: ignoring deletion of file auto/lib/libgd/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/libatomic
+dpkg-source: warning: ignoring deletion of file auto/lib/libatomic/make, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/libatomic/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/google-perftools
+dpkg-source: warning: ignoring deletion of file auto/lib/google-perftools/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/geoip
+dpkg-source: warning: ignoring deletion of file auto/lib/geoip/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/libxslt
+dpkg-source: warning: ignoring deletion of file auto/lib/libxslt/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory auto/lib/openssl
+dpkg-source: warning: ignoring deletion of file auto/lib/openssl/make, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/openssl/makefile.msvc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/openssl/makefile.bcc, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file auto/lib/openssl/conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory contrib
+dpkg-source: warning: ignoring deletion of file contrib/README, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file contrib/geo2nginx.pl, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory contrib/vim
+dpkg-source: warning: ignoring deletion of directory contrib/vim/ftplugin
+dpkg-source: warning: ignoring deletion of file contrib/vim/ftplugin/nginx.vim, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory contrib/vim/syntax
+dpkg-source: warning: ignoring deletion of file contrib/vim/syntax/nginx.vim, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory contrib/vim/indent
+dpkg-source: warning: ignoring deletion of file contrib/vim/indent/nginx.vim, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory contrib/vim/ftdetect
+dpkg-source: warning: ignoring deletion of file contrib/vim/ftdetect/nginx.vim, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory contrib/unicode2nginx
+dpkg-source: warning: ignoring deletion of file contrib/unicode2nginx/unicode-to-nginx.pl, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file contrib/unicode2nginx/koi-utf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file contrib/unicode2nginx/win-utf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory conf
+dpkg-source: warning: ignoring deletion of file conf/koi-utf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/fastcgi.conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/scgi_params, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/uwsgi_params, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/nginx.conf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/koi-win, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/fastcgi_params, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/win-utf, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file conf/mime.types, use --include-removal to override
+dpkg-source: info: building nginx in nginx_1.21.6-100.debian.tar.xz
+dpkg-source: info: building nginx in nginx_1.21.6-100.dsc
+ dpkg-genbuildinfo --build=source
+ dpkg-genchanges --build=source >../nginx_1.21.6-100_source.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source -i --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian nginx_1.21.6-100_source.changes ...
+warning: running with root privileges is not recommended!
+W: nginx source: newer-standards-version 4.6.0 (current is 4.5.1)
+W: nginx source: no-nmu-in-changelog
+W: nginx source: orig-tarball-missing-upstream-signature nginx_1.21.6.orig.tar.xz
+W: nginx source: source-nmu-has-incorrect-version-number 1.21.6-100
+Finished running lintian.

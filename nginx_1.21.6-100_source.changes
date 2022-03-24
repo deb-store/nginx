@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 24 Mar 2022 23:46:00 +0300
+Source: nginx
+Architecture: source
+Version: 1.21.6-100
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Changed-By: Package Store <mail@z17.dev>
+Changes:
+ nginx (1.21.6-100) unstable; urgency=medium
+ .
+   * NEW: Nginx v1.21.6
+Checksums-Sha1:
+ 70fe3f22b5f854bddf7cd92de1e4d6f45d7e5f96 3804 nginx_1.21.6-100.dsc
+ 5f58cdc3ecc8739c255b8d21348bdc3950fcfecf 686920 nginx_1.21.6.orig.tar.xz
+ 45544a00966b2a631811dec0db7a626f26c34298 1068816 nginx_1.21.6-100.debian.tar.xz
+ 005eb51a29bf0d36527221efef27d463b4fae542 4572 nginx_1.21.6-100_source.buildinfo
+Checksums-Sha256:
+ 7a0fe957fda87c04f216deedd69f67a32a4983fee7488f3aef90df23405f5da5 3804 nginx_1.21.6-100.dsc
+ 796bd42cf56d2c5edd50bf571dd243aac7fae1fe499d63d9c42cd10ff9193ff7 686920 nginx_1.21.6.orig.tar.xz
+ 039f895dc7c6701028005da879e10f0a639c2af9909dda2f03c8c0ac4078b034 1068816 nginx_1.21.6-100.debian.tar.xz
+ 44431e9f311f7f3f5208d65b7f4bf293ae91d31e167a8cabf61cfb4aa7e0cfa8 4572 nginx_1.21.6-100_source.buildinfo
+Files:
+ decb353def2bd5f992cec6d7dbc2eeb5 3804 httpd optional nginx_1.21.6-100.dsc
+ 0b1fb5fbe749ef649654b7976d3be75a 686920 httpd optional nginx_1.21.6.orig.tar.xz
+ c5be839749aac7775b173610b599f5b6 1068816 httpd optional nginx_1.21.6-100.debian.tar.xz
+ af2dee7b145cd6cfc9905f0256b8671f 4572 httpd optional nginx_1.21.6-100_source.buildinfo
